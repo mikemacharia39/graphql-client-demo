@@ -1,0 +1,17 @@
+query getStudent ($studentId : Float, $courseNameFilter : [CourseNameFilter]) {
+    getStudent(studentId: $studentId) {
+        id
+        firstName
+        lastName
+        address
+        dob
+        fullName
+        studentCourses (courseNameFilter : $courseNameFilter) {
+            course {
+                id
+                code
+                name
+            }
+        }
+    }
+}
