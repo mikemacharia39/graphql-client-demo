@@ -3,7 +3,9 @@
 ## Who is the provider?
 Checkout https://github.com/mikemacharia39/graphql-demo
 
-The provider runs on the endpoint -> http://localhost:8084/graphql
+The provider runs on the endpoint http://localhost:8084/graphql
+
+This will allow you test simulate api calls to the "server/provider"
 
 ## API Doc
 
