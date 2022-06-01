@@ -7,6 +7,8 @@ query getStudent ($studentId : Float, $courseNameFilter : [CourseNameFilter]) {
         dob
         fullName
         studentCourses (courseNameFilter : $courseNameFilter) {
+            id
+            active
             course {
                 id
                 code

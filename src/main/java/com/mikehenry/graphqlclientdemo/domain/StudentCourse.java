@@ -11,5 +11,5 @@ public class StudentCourse {
 
     private Long id;
     private Course course;
-    private Integer active = 1;
+    private Integer active;
 }
