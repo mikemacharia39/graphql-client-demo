@@ -21,7 +21,7 @@ public class StudentController {
     }
 
     @PostMapping("/create")
-    public StudentResponse createStudent(@RequestBody CreateStudentRequest createStudentRequest) {
+    public StudentResponse createStudent(@RequestBody CreateStudentRequest createStudentRequest) throws IOException {
         return studentService.createStudent(createStudentRequest);
     }
 }

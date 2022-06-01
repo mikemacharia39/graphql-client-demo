@@ -39,7 +39,20 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public StudentResponse createStudent(CreateStudentRequest createStudentRequest) {
-        return null;
+    public StudentResponse createStudent(CreateStudentRequest createStudentRequest) throws IOException {
+        final String mutation = GraphQLSchemaReaderUtil.readSchemaFromFile("createStudent");
+
+        Map<String, Object> variables = new HashMap<>();
+        variables.put("createStudentRequest", createStudentRequest);
+        variables.put("courseNameFilter", List.of(CourseNameFilter.ALL));
+
+        GraphQLRequest request = GraphQLRequest.builder()
+                .query(mutation)
+                .variables(variables)
+                .build();
+
+        GraphQLResponse response = graphQLWebClient.post(request).block();
+
+        return response.get("createStudent", StudentResponse.class);
     }
 }

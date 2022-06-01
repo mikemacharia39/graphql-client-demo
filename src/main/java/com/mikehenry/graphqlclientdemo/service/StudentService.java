@@ -9,5 +9,5 @@ public interface StudentService {
 
     StudentResponse getStudent(Long id) throws IOException;
 
-    StudentResponse createStudent(CreateStudentRequest createStudentRequest);
+    StudentResponse createStudent(CreateStudentRequest createStudentRequest) throws IOException;
 }
