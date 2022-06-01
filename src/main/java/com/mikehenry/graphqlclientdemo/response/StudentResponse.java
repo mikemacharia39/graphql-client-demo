@@ -1,7 +1,6 @@
-package com.mikehenry.graphqldemo.response;
+package com.mikehenry.graphqlclientdemo.response;
 
-import com.mikehenry.graphqldemo.model.Student;
-import com.mikehenry.graphqldemo.model.StudentCourse;
+import com.mikehenry.graphqlclientdemo.domain.StudentCourse;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,19 +17,6 @@ public class StudentResponse {
     private String lastName;
     private LocalDate dob;
     private String address;
-
     private List<StudentCourse> studentCourses = new ArrayList<>();
-
-    private Student student;
-
     private String fullName;
-
-    public StudentResponse(Student student) {
-        this.id = student.getId();
-        this.firstName = student.getFirstName();
-        this.lastName = student.getLastName();
-        this.dob = student.getDob();
-        this.address = student.getAddress();
-        this.student = student;
-    }
 }
