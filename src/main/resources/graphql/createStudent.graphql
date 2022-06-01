@@ -1,0 +1,19 @@
+mutation createStudent ($createStudentRequest : CreateStudentRequest, $courseNameFilter : [CourseNameFilter]) {
+    createStudent(createStudentRequest: $createStudentRequest) {
+        id
+        firstName
+        lastName
+        dob
+        address
+        fullName
+        studentCourses (courseNameFilter : $courseNameFilter) {
+            id
+            course {
+                id
+                code
+                name
+            }
+            active
+        }
+    }
+}
