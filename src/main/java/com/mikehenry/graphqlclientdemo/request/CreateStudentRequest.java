@@ -1,4 +1,4 @@
-package com.mikehenry.graphqldemo.request;
+package com.mikehenry.graphqlclientdemo.request;
 
 import lombok.Getter;
 import lombok.Setter;

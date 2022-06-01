@@ -1,6 +1,6 @@
-package com.mikehenry.graphqldemo.request;
+package com.mikehenry.graphqlclientdemo.request;
 
-import com.mikehenry.graphqldemo.filter.CourseNameFilter;
+import com.mikehenry.graphqlclientdemo.domain.CourseNameFilter;
 import lombok.Getter;
 import lombok.Setter;
 

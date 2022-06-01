@@ -1,4 +1,4 @@
-package com.mikehenry.graphqldemo.filter;
+package com.mikehenry.graphqlclientdemo.domain;
 
 public enum CourseNameFilter {
     ALL,
